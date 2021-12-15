@@ -1,0 +1,33 @@
+// このファイルには、mixin の記述を行います。
+// 追加を行った場合、使い方に関するコメントを記載してください
+
+$spAndPcBreakpoint: 750; // pc と sp のレスポンシブを切り替える横幅のブレークポイント(px)
+
+// ブレークポイントの一覧
+$breakpoints: (
+    'sp': 'screen and (max-width: #{$spAndPcBreakpoint}px)',
+    'pc': 'screen and (min-width: #{$spAndPcBreakpoint+1}px)',
+);
+
+/**
+ * レスポンシブ指定する際に用いる mixin
+ *
+ * h1 {
+ *   color: red; // 共通のスタイル
+ *
+ *   @include mq(pc) { // この中が pc 版でのみ適用されるスタイル
+ *      color: blue;
+ *   }
+ *
+ *   @include mq(sp) { // この中が sp 版でのみ適用されるスタイル
+ *      color: yellow;
+ *   }
+ * }
+ *
+ * のように指定してください。
+ */
+@mixin mq($breakpoint: sp) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}

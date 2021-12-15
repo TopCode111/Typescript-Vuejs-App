@@ -1,0 +1,61 @@
+{
+  "name": "Web Template - aLiz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "gulp",
+    "clean": "gulp clean",
+    "build": "gulp build; npm run webp:build",
+    "webp": "gulp webp",
+    "webp:build": "gulp webpBuild",
+    "export": "git archive HEAD --output=export/export.zip",
+    "publish": "git archive HEAD public --output=export/publish.zip"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aLizlab/product-web-template.git"
+  },
+  "author": "aLiz-Nancy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aLizlab/product-web-template/issues"
+  },
+  "homepage": "https://github.com/aLizlab/product-web-template#readme",
+  "dependencies": {
+    "autoprefixer": "^10.3.1",
+    "browser-sync": "^2.27.4",
+    "del": "^6.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-ejs": "^5.1.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-svgmin": "^4.0.1",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "gulp-uglify": "^3.0.2",
+    "gulp-webp": "^4.0.1",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-jpeg-recompress": "^7.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "node-notifier": "^10.0.0",
+    "postcss": "^8.3.5",
+    "sass": "^1.35.2",
+    "tailwindcss": "^2.2.4"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 5%",
+    "ie >= 11"
+  ]
+}
