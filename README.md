@@ -57,7 +57,3 @@ ejs, scss, typescript を用いた Web サイト制作の練習や環境構築�
 
 1. `npm run build` を実行
 1. dist という公開用のファイルができるので、中身を FTP 等でサーバに配置する
-
-# 参考
-
-https://github.com/engclass-z/lp_template2 のテンプレートを利用しています。
